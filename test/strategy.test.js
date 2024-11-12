@@ -1,10 +1,11 @@
-import { expect } from 'chai';
-import { MLHStrategy } from '../lib/index.js';
+const chai = require('chai');
+const Strategy = require('../lib/strategy');
+const expect = chai.expect;
 
 describe('MLHStrategy', function() {
   describe('constructor', function() {
     it('should be named mlh', function() {
-      const strategy = new MLHStrategy({
+      const strategy = new Strategy({
         clientID: 'ABC123',
         clientSecret: 'secret'
       }, function() {});
@@ -12,7 +13,7 @@ describe('MLHStrategy', function() {
     });
 
     it('should initialize with default options', function() {
-      const strategy = new MLHStrategy({
+      const strategy = new Strategy({
         clientID: 'ABC123',
         clientSecret: 'secret'
       }, function() {});
@@ -25,7 +26,7 @@ describe('MLHStrategy', function() {
 
   describe('_buildApiUrl', function() {
     it('should return base URL when no expand fields', function() {
-      const strategy = new MLHStrategy({
+      const strategy = new Strategy({
         clientID: 'ABC123',
         clientSecret: 'secret'
       }, function() {});
@@ -34,7 +35,7 @@ describe('MLHStrategy', function() {
     });
 
     it('should include expand fields in URL when specified', function() {
-      const strategy = new MLHStrategy({
+      const strategy = new Strategy({
         clientID: 'ABC123',
         clientSecret: 'secret',
         expandFields: ['education', 'professional_experience']
@@ -48,7 +49,7 @@ describe('MLHStrategy', function() {
 
   describe('userProfile', function() {
     it('should normalize profile', function(done) {
-      const strategy = new MLHStrategy({
+      const strategy = new Strategy({
         clientID: 'ABC123',
         clientSecret: 'secret'
       }, function() {});
