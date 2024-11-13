@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "MyMLH OAuth 2.0 authentication strategy for Passport",
   "main": "./lib/index.js",
+  "type": "module",
   "directories": {
     "example": "examples",
     "lib": "lib",
