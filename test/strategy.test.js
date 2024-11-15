@@ -66,11 +66,10 @@ describe('MLHStrategy', function() {
 
         expect(profile.provider).to.equal('mlh');
         expect(profile.id).to.equal('123');
-        expect(profile.displayName).to.equal('Jane Hacker');
-        expect(profile.name.familyName).to.equal('Hacker');
-        expect(profile.name.givenName).to.equal('Jane');
-        expect(profile.emails[0].value).to.equal('jane@example.com');
-        expect(profile.phoneNumbers[0].value).to.equal('+1234567890');
+        expect(profile.first_name).to.equal('Jane');
+        expect(profile.last_name).to.equal('Hacker');
+        expect(profile.email).to.equal('jane@example.com');
+        expect(profile.phone_number).to.equal('+1234567890');
         done();
       });
     });
