@@ -1,11 +1,10 @@
 {
   "name": "passport-mlh-oauth2",
   "version": "1.0.0",
-  "description": "MyMLH OAuth 2.0 authentication strategy for Passport",
+  "description": "MyMLH v4 OAuth 2.0 authentication strategy for Passport",
   "main": "./lib/index.js",
   "type": "module",
   "directories": {
-    "example": "examples",
     "lib": "lib",
     "test": "test"
   },
@@ -20,6 +19,7 @@
   "keywords": [
     "passport",
     "mlh",
+    "mymlh",
     "auth",
     "authn",
     "authentication",
@@ -27,7 +27,7 @@
     "oauth",
     "oauth2"
   ],
-  "author": "Jon Gottfried",
+  "author": "Jonathan Gottfried",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jonmarkgo/passport-mlh-oauth2/issues"
